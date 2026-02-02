@@ -6,6 +6,7 @@ import brochure from "@/assets/brochure.pdf";
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import CRMForm from '@/components/CRMForm/CRMForm';
 
 const contactInfo = [
   {
@@ -208,138 +209,8 @@ export default function QuotationForm({ selectedProduct }) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl">
-              {isSubmitted ? (
-                <motion.div
-                  className="text-center py-8"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                >
-                  <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-10 h-10 text-emerald-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Request Received</h3>
-                  <p className="text-slate-500 mb-6">Your concierge will contact you within 24 hours.</p>
-
-                  <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 mb-8 text-left">
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Inquiry Reference</p>
-                    <p className="text-lg font-mono font-bold text-slate-800 tracking-tighter">MC-INFRA-2025</p>
-
-                    <div className="mt-6 space-y-4">
-                      <div className="flex gap-4">
-                        <div className="w-1 bg-emerald-500 rounded-full" />
-                        <div>
-                          <p className="text-sm font-bold text-slate-800">Reviewing Requirements</p>
-                          <p className="text-xs text-slate-500">Our engineering lead is reviewing your inquiry.</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-4 opacity-40">
-                        <div className="w-1 bg-slate-200 rounded-full" />
-                        <div>
-                          <p className="text-sm font-bold text-slate-800">Proposal Generation</p>
-                          <p className="text-xs text-slate-500">A custom quote will be drafted for your review.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <Button
-                    variant="outline"
-                    onClick={() => setIsSubmitted(false)}
-                    className="rounded-full px-8"
-                  >
-                    Done
-                  </Button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-700">Full Name *</label>
-                      <Input
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) => handleChange('name', e.target.value)}
-                        className={`h-12 rounded-xl border-slate-200 focus:border-emerald-500 focus:ring-emerald-500 ${errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
-                      />
-                      {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-700">Email *</label>
-                      <Input
-                        type="email"
-                        placeholder="john@company.com"
-                        value={formData.email}
-                        onChange={(e) => handleChange('email', e.target.value)}
-                        className={`h-12 rounded-xl border-slate-200 focus:border-emerald-500 focus:ring-emerald-500 ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
-                      />
-                      {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
-                    </div>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-700">Phone *</label>
-                      <Input
-                        placeholder="+91 98765 43210"
-                        value={formData.phone}
-                        onChange={(e) => handleChange('phone', e.target.value)}
-                        className={`h-12 rounded-xl border-slate-200 focus:border-emerald-500 focus:ring-emerald-500 ${errors.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
-                      />
-                      {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-slate-700">Company</label>
-                      <Input
-                        placeholder="Your Company"
-                        value={formData.company}
-                        onChange={(e) => handleChange('company', e.target.value)}
-                        className="h-12 rounded-xl border-slate-200 focus:border-emerald-500 focus:ring-emerald-500"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-700">Service Required *</label>
-                    <Select value={formData.service} onValueChange={(value) => handleChange('service', value)}>
-                      <SelectTrigger className={`h-12 rounded-xl border-slate-200 focus:border-emerald-500 focus:ring-emerald-500 ${errors.service ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}>
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {services.map((service) => (
-                          <SelectItem key={service} value={service}>
-                            {service}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {errors.service && <p className="text-xs text-red-500 mt-1">{errors.service}</p>}
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-slate-700">Message</label>
-                    <Textarea
-                      placeholder="Tell us about your requirements..."
-                      value={formData.message}
-                      onChange={(e) => handleChange('message', e.target.value)}
-                      className="min-h-[120px] rounded-xl border-slate-200 focus:border-emerald-500 focus:ring-emerald-500 resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white h-14 rounded-xl text-lg font-semibold group"
-                  >
-                    Send Request
-                    <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-
-                  <p className="text-center text-sm text-slate-500">
-                    By submitting, you agree to our Privacy Policy
-                  </p>
-                </form>
-              )}
+            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-2xl overflow-hidden min-h-[600px]">
+              <CRMForm />
             </div>
           </motion.div>
         </div>

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { projects } from '@/data/projects';
 import { Button } from '@/components/ui/button';
 import SEO from '@/components/SEO/SEO';
+import CRMForm from '@/components/CRMForm/CRMForm';
 
 const ProjectDetail = () => {
     const { id } = useParams();
@@ -150,16 +151,9 @@ const ProjectDetail = () => {
                             </div>
                         </div>
 
-                        <div className="mt-16 pt-12 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8">
-                            <div>
-                                <p className="text-2xl font-black text-slate-900 tracking-tight mb-2">Witness Engineering Excellence</p>
-                                <p className="text-slate-500 font-medium">Ready to see these machines in action?</p>
-                            </div>
-                            <Link to="/#quotation-form">
-                                <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-black text-sm uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl shadow-orange-500/20">
-                                    Request Demonstration
-                                </button>
-                            </Link>
+                        <div className="mt-16 pt-12 border-t border-slate-200">
+                            <h3 className="text-2xl font-black text-slate-900 tracking-tight mb-8 text-center">Request A Quotation</h3>
+                            <CRMForm />
                         </div>
                     </motion.div>
                 </div>

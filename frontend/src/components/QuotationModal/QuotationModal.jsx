@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import brochure from "@/assets/brochure.pdf";
+import CRMForm from '@/components/CRMForm/CRMForm';
 
 export default function QuotationModal({ isOpen, onClose }) {
     const handleSubmit = (e) => {
@@ -78,67 +79,8 @@ export default function QuotationModal({ isOpen, onClose }) {
                                     <X className="w-6 h-6" />
                                 </button>
 
-                                <div className="max-w-md mx-auto md:max-w-none md:mx-0">
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Request Quotation</h2>
-                                    <p className="text-gray-500 mb-8 text-sm leading-relaxed">
-                                        Complete control over products allows us to ensure our customers receive the best quality prices and service. We take great pride in everything that we do
-                                    </p>
-
-                                    <form onSubmit={handleSubmit} className="space-y-6">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                            <div className="space-y-1">
-                                                <Input
-                                                    placeholder="Name"
-                                                    className="bg-gray-50 border-gray-100 focus:border-gray-200 focus:ring-0 rounded-sm h-12 px-4 placeholder:text-gray-400"
-                                                />
-                                            </div>
-                                            <div className="space-y-1">
-                                                <Input
-                                                    type="email"
-                                                    placeholder="Email"
-                                                    className="bg-gray-50 border-gray-100 focus:border-gray-200 focus:ring-0 rounded-sm h-12 px-4 placeholder:text-gray-400"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                            <div className="space-y-1">
-                                                <Input
-                                                    placeholder="Phone"
-                                                    className="bg-gray-50 border-gray-100 focus:border-gray-200 focus:ring-0 rounded-sm h-12 px-4 placeholder:text-gray-400"
-                                                />
-                                            </div>
-                                            <div className="space-y-1">
-                                                <Select>
-                                                    <SelectTrigger className="bg-gray-50 border-gray-100 focus:ring-0 rounded-sm h-12 px-4 text-gray-500">
-                                                        <SelectValue placeholder="Select Your domain" />
-                                                    </SelectTrigger>
-                                                    <SelectContent>
-                                                        <SelectItem value="govt">Govt.</SelectItem>
-                                                        <SelectItem value="private">Private</SelectItem>
-                                                        <SelectItem value="other">Other</SelectItem>
-                                                        <SelectItem value="outside-india">Outside India</SelectItem>
-                                                    </SelectContent>
-                                                </Select>
-                                            </div>
-                                        </div>
-
-                                        <div className="space-y-1">
-                                            <Textarea
-                                                placeholder="Tell us about your requirement"
-                                                className="bg-gray-50 border-gray-100 focus:border-gray-200 focus:ring-0 rounded-sm min-h-[120px] p-4 placeholder:text-gray-400 resize-none"
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <Button
-                                                type="submit"
-                                                className="bg-[#2D2D2D] hover:bg-black text-white font-medium py-3 px-8 rounded-sm h-auto transition-colors w-auto shadow-lg"
-                                            >
-                                                Submit enquiry
-                                            </Button>
-                                        </div>
-                                    </form>
+                                <div className="h-full min-h-[600px]">
+                                    <CRMForm />
                                 </div>
                             </div>
 

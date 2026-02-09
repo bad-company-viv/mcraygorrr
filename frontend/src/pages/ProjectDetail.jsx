@@ -31,6 +31,7 @@ const ProjectDetail = () => {
                 title={project.title}
                 description={project.description}
                 keywords={`mcraygor project, ${project.category}, ${project.location}, infrastructure project`}
+                image={project.image}
             />
 
             {/* Background Decorative Elements */}

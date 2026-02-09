@@ -1,0 +1,22 @@
+# 1. Block AI Training & Scraper Bots
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+# 2. General Settings for All Other Search Engines
+User-agent: *
+Allow: /
+
+# 3. Sitemap Location
+Sitemap: https://beta.mcraygor.com/sitemap.xml

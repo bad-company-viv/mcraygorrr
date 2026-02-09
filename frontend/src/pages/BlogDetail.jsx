@@ -26,6 +26,7 @@ const BlogDetail = () => {
                 title={blog.title}
                 description={blog.excerpt}
                 keywords={`mcraygor blog, ${blog.author}, water management news, infrastructure insights`}
+                image={blog.image}
             />
             <div className="container mx-auto px-4 max-w-4xl">
                 <Link to="/blogs" className="inline-flex items-center text-gray-500 hover:text-primary mb-8 transition-colors">

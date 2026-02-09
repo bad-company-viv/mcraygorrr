@@ -4,22 +4,20 @@ import { Menu, X, Phone, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import brochure from "@/assets/brochure.pdf";
+import QuotationModal from "@/components/QuotationModal/QuotationModal";
 
 const navItems = [
   { name: "Home", to: "/" },
   { name: "About Us", to: "/about" },
   { name: "Products", to: "/products" },
   { name: "Projects", to: "/projects" },
-  { name: "Gallery", to: "/gallery" },
-  { name: "Blogs", to: "/blogs" },
-  { name: "Awards", to: "/awards" },
-  { name: "Contact", action: "contact" },
 ];
 
 export default function Header({ logoUrl }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -30,15 +28,8 @@ export default function Header({ logoUrl }) {
     }
   };
 
-  const handleGetQuote = () => {
-    if (location.pathname !== '/') {
-      navigate('/#quotation-form');
-    } else {
-      const element = document.getElementById('quotation-form');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  const handleGetAudit = () => {
+    setIsModalOpen(true);
   };
 
   useEffect(() => {
@@ -64,6 +55,8 @@ export default function Header({ logoUrl }) {
 
   return (
     <>
+      <QuotationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
       {/* ================= TOP BAR ================= */}
       <div
         className="hidden lg:flex fixed top-0 left-0 right-0 z-50 h-[40px] items-center border-b transition-all duration-300"
@@ -121,7 +114,7 @@ export default function Header({ logoUrl }) {
                 >
                   {item.action === 'contact' ? (
                     <button
-                      onClick={handleGetQuote}
+                      onClick={handleGetAudit}
                       className="px-2 py-2 rounded-lg font-medium transition-colors whitespace-nowrap group relative"
                       style={{ color: textColor }}
                     >
@@ -181,10 +174,10 @@ export default function Header({ logoUrl }) {
                 </Button>
               </a>
               <Button
-                onClick={handleGetQuote}
+                onClick={handleGetAudit}
                 className="rounded-full bg-orange-500 hover:bg-orange-600 text-zinc-900 px-6"
               >
-                Get Quote
+                Get Growth Audit
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -215,7 +208,7 @@ export default function Header({ logoUrl }) {
                     {item.action === "contact" ? (
                       <button
                         onClick={() => {
-                          handleGetQuote();
+                          handleGetAudit();
                           setIsMobileMenuOpen(false);
                         }}
                         className="text-white text-lg font-medium hover:text-orange-500 transition-colors"
@@ -244,12 +237,12 @@ export default function Header({ logoUrl }) {
                   </a>
                   <Button
                     onClick={() => {
-                      handleGetQuote();
+                      handleGetAudit();
                       setIsMobileMenuOpen(false);
                     }}
                     className="w-full rounded-full bg-orange-500 text-zinc-900"
                   >
-                    Get Quote
+                    Get Growth Audit
                   </Button>
                 </div>
               </div>

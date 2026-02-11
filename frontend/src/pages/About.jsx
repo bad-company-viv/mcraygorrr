@@ -136,7 +136,7 @@ const About = () => {
           >
             <img
               src={machine2}
-              alt="History"
+              alt="McRAYGOR History and Expertise"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />

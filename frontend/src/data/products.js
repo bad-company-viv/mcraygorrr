@@ -1,18 +1,18 @@
-import product1 from '../assets/products/product1.jpeg';
-import product2 from '../assets/products/product2.jpeg';
-import product3 from '../assets/products/product3.jpeg';
-import product4 from '../assets/products/product4.jpeg';
-import product5 from '../assets/products/product5.jpeg';
-import product6 from '../assets/products/product6.jpeg';
-import product7 from '../assets/products/product7.jpeg';
-import product8 from '../assets/products/product8.jpeg';
-import product9 from '../assets/products/product9.jpeg';
-import product10 from '../assets/products/product10.jpeg';
-import product11 from '../assets/products/product11.jpeg';
-import product12 from '../assets/products/product12.jpeg';
-import product13 from '../assets/products/product13.jpeg';
-import product14 from '../assets/products/product14.jpeg';
-import product15 from '../assets/products/product15.jpeg';
+import product1 from '../assets/products/sewer-jetting-suction-machine.jpeg';
+import product2 from '../assets/products/super-sucker-machine.jpeg';
+import product3 from '../assets/products/power-bucket-machine.jpeg';
+import product4 from '../assets/products/sewage-suction-tanker.jpeg';
+import product5 from '../assets/products/mini-jetting-machine.jpeg';
+import product6 from '../assets/products/mm-suction-vacuum-pump.jpeg';
+import product7 from '../assets/products/gully-suction-emptier.jpeg';
+import product8 from '../assets/products/mobile-toilets.jpeg';
+import product9 from '../assets/products/sewer-rodding-machine.jpeg';
+import product10 from '../assets/products/refuse-compactor.jpeg';
+import product11 from '../assets/products/cromoflex-spring-steel-rods.jpeg';
+import product12 from '../assets/products/desilting-machine-grab-bucket.jpeg';
+import product13 from '../assets/products/dumper-placer-container.jpeg';
+import product14 from '../assets/products/oil-suction-machine.jpeg';
+import product15 from '../assets/products/super-sucker-dump-truck.jpeg';
 
 export const products = [
     {

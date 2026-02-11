@@ -1,9 +1,9 @@
-import project1 from '../assets/projects/project1.jpeg';
-import project2 from '../assets/projects/project2.jpeg';
-import project3 from '../assets/projects/project3.jpeg';
-import project4 from '../assets/projects/project4.jpeg';
-import project5 from '../assets/projects/project5.jpeg';
-import project6 from '../assets/projects/project6.jpeg';
+import project1 from '../assets/projects/united-nations-haiti-mission.jpeg';
+import project2 from '../assets/projects/karnal-highway-pipeline-leak.jpeg';
+import project3 from '../assets/projects/ludhiana-clogged-sewer-project.jpeg';
+import project4 from '../assets/projects/maharashtra-sewer-broke-bmc.jpeg';
+import project5 from '../assets/projects/reliance-industries-oil-spill.jpeg';
+import project6 from '../assets/projects/delhi-jal-board-sewage-treatment.jpeg';
 
 export const projects = [
     {

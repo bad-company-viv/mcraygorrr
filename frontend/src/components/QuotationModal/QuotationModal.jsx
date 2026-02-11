@@ -2,20 +2,10 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import brochure from "@/assets/brochure.pdf";
 import CRMForm from '@/components/CRMForm/CRMForm';
 
 export default function QuotationModal({ isOpen, onClose }) {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic here
-        setTimeout(() => {
-            onClose();
-        }, 1000);
-    };
 
     return (
         <AnimatePresence>

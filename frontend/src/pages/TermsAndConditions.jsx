@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import SEO from '@/components/SEO/SEO';
+
 const TermsAndConditions = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -7,6 +9,10 @@ const TermsAndConditions = () => {
 
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
+            <SEO
+                title="Terms and Conditions"
+                description="Terms and Conditions for using McRAYGOR Mechanicals website. Read our rules and regulations."
+            />
             <div className="container mx-auto px-4 max-w-4xl">
                 <h1 className="text-4xl font-bold mb-8 text-center text-gray-900">Terms and Conditions</h1>
                 <div className="prose prose-lg max-w-none text-gray-700">
@@ -37,7 +43,7 @@ const TermsAndConditions = () => {
 
                     <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Contact Us</h3>
                     <p className="mb-6">
-                        If you have any questions about our Terms and Conditions, please contact us via email at info@mcraygor.com or phone at +91 98120 01368.
+                        If you have any questions about our Terms and Conditions, please contact us via email at info@mcraygor.com or phone at +91 98120 01368 / +91 85878 29000.
                     </p>
                 </div>
             </div>

@@ -166,17 +166,26 @@ export default function Footer() {
             )}
 
             <div className="space-y-3 mt-6">
-              <a href="tel:+919812001368" className="flex gap-3 text-slate-400 hover:text-white">
-                <Phone className="w-4 h-4 text-emerald-500" />
-                +91 98120 01368
-              </a>
+              <div className="flex flex-col gap-2">
+                <a href="tel:+919812001368" className="flex gap-3 text-slate-400 hover:text-white">
+                  <Phone className="w-4 h-4 text-emerald-500 mt-1" />
+                  +91 98120 01368
+                </a>
+                <a href="tel:+918587829000" className="flex gap-3 text-slate-400 hover:text-white pl-7">
+                  +91 85878 29000
+                </a>
+              </div>
               <a href="mailto:info@mcraygor.com" className="flex gap-3 text-slate-400 hover:text-white">
                 <Mail className="w-4 h-4 text-emerald-500" />
                 info@mcraygor.com
               </a>
               <div className="flex gap-3 text-slate-400">
-                <MapPin className="w-4 h-4 text-emerald-500" />
-                Pan-India Service Network
+                <MapPin className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                <span>
+                  14-Dhumaspur Road, Sohna Road,<br />
+                  Sector 67, Gurugram (Haryana)<br />
+                  INDIA-122002
+                </span>
               </div>
             </div>
           </motion.div>

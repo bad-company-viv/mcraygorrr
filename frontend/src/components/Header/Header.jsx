@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import brochure from "@/assets/brochure.pdf";
 import QuotationModal from "@/components/QuotationModal/QuotationModal";
 
@@ -18,7 +18,6 @@ export default function Header({ logoUrl }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
 
   const handleHomeClick = (e) => {
@@ -64,11 +63,17 @@ export default function Header({ logoUrl }) {
       >
         <div className="w-full mx-auto px-8 lg:px-20 flex justify-between w-full text-sm">
           <div className="flex gap-6">
-            <a href="tel:+919812001368" className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-emerald-400" />
-              +91 98120 01368
-            </a>
-            <a href="mailto:info@mcraygor.com" className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
+              <a href="tel:+919812001368" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                <Phone className="w-4 h-4 text-emerald-400" />
+                +91 98120 01368
+              </a>
+              <span className="text-emerald-400/50">|</span>
+              <a href="tel:+918587829000" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
+                +91 85878 29000
+              </a>
+            </div>
+            <a href="mailto:info@mcraygor.com" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
               <Mail className="w-4 h-4 text-emerald-400" />
               info@mcraygor.com
             </a>
@@ -177,7 +182,7 @@ export default function Header({ logoUrl }) {
                 onClick={handleGetAudit}
                 className="rounded-full bg-orange-500 hover:bg-orange-600 text-zinc-900 px-6"
               >
-                Get Growth Audit
+                Get a Quote
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -242,7 +247,7 @@ export default function Header({ logoUrl }) {
                     }}
                     className="w-full rounded-full bg-orange-500 text-zinc-900"
                   >
-                    Get Growth Audit
+                    Get a Quote
                   </Button>
                 </div>
               </div>

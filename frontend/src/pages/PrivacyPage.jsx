@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react';
 
-const PrivacyPolicy = () => {
+import SEO from '@/components/SEO/SEO';
+
+const PrivacyPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
+            <SEO
+                title="Privacy Policy"
+                description="Privacy Policy for McRAYGOR Mechanicals. Learn how we collect, use, and protect your personal information."
+            />
             <div className="container mx-auto px-4 max-w-4xl">
                 <h1 className="text-4xl font-bold mb-8 text-center text-gray-900">Privacy Policy</h1>
                 <div className="prose prose-lg max-w-none text-gray-700">
@@ -49,4 +55,4 @@ const PrivacyPolicy = () => {
     );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPage;

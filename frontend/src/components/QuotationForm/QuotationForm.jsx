@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MapPin, Clock, CheckCircle2, Download } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import brochure from "@/assets/brochure.pdf";
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import CRMForm from '@/components/CRMForm/CRMForm';
 
 const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91 98120 01368',
-    link: 'tel:+919812001368',
+    value: '+91 98120 01368 / 85878 29000',
+    link: 'tel:+919812001368', // Primary Only
   },
   {
     icon: Mail,
@@ -23,9 +20,9 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: 'Location',
-    value: 'India (Pan-India Service)',
-    link: '#',
+    label: 'Head Office',
+    value: 'Sector 67, Gurugram, Haryana',
+    link: 'https://maps.google.com/?q=14-Dhumaspur+Road,Sohna+Road,Sector+67,Gurugram,Haryana',
   },
   {
     icon: Clock,
@@ -35,86 +32,10 @@ const contactInfo = [
   },
 ];
 
-const services = [
-  'Sewer Cleaning Equipment',
-  'Water Management Solutions',
-  'Industrial Machinery',
-  'Disaster Management Equipment',
-  'Mechanical Tools',
-  'Consultancy Services',
-  'Other',
-];
+export default function QuotationForm() {
+  // Unused state and handlers removed for performance and cleanliness
+  // The actual form handling is done via the embedded CRMForm iframe
 
-export default function QuotationForm({ selectedProduct }) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    message: '',
-  });
-  const [errors, setErrors] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  React.useEffect(() => {
-    if (selectedProduct) {
-      setFormData(prev => ({
-        ...prev,
-        service: 'Sewer Cleaning Equipment',
-        message: `I am interested in the ${selectedProduct}. Please provide more details.`
-      }));
-    }
-  }, [selectedProduct]);
-
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Full name is required';
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-
-    const phoneRegex = /^\+?[\d\s-]{10,}$/;
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
-    } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number';
-    }
-
-    if (!formData.service) newErrors.service = 'Please select a service';
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Mock API call
-      setIsSubmitted(true);
-      setTimeout(() => setIsSubmitted(false), 5000);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: '',
-      });
-      setErrors({});
-    }
-  };
-
-  const handleChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-    if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: null }));
-    }
-  };
 
   return (
     <section id="quotation-form" className="relative py-24 bg-slate-900 overflow-hidden">

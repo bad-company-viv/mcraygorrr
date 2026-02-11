@@ -5,11 +5,11 @@ import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const heroImages = [
-  "/images/1.jpeg",
-  "/images/2.jpeg",
-  "/images/3.jpeg",
-  "/images/4.jpeg",
-  "/images/5.jpeg",
+  { src: "/images/McRaygor-Creative-1.webp", alt: "McRAYGOR Heavy Duty Sewer Cleaning Machine" },
+  { src: "/images/McRaygor-Creative-2.webp", alt: "Advanced Jetting Suction Unit Operations" },
+  { src: "/images/McRaygor-Creative-3.webp", alt: "Industrial Vacuum Loading System" },
+  { src: "/images/McRaygor-Creative-4.webp", alt: "Municipal Waste Management Vehicle" },
+  { src: "/images/McRaygor-Creative-5.webp", alt: "High Pressure Water Jetting Equipment" },
 ];
 
 export default function HeroSection() {
@@ -31,8 +31,8 @@ export default function HeroSection() {
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
-            src={heroImages[current]}
-            alt="McRAYGOR Background"
+            src={heroImages[current].src}
+            alt={heroImages[current].alt}
             className="w-full h-full object-cover opacity-40"
             initial={{ opacity: 0, scale: 1.05 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -118,8 +118,8 @@ export default function HeroSection() {
                 transition={{ duration: 0.9, ease: "easeInOut" }}
               >
                 <img
-                  src={heroImages[current]}
-                  alt="McRAYGOR Machine"
+                  src={heroImages[current].src}
+                  alt={heroImages[current].alt}
                   className="w-full h-[500px] object-contain bg-slate-900/50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />

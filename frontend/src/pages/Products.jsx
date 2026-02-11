@@ -70,19 +70,13 @@ const Products = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <div key={product.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 flex flex-col h-full group">
-              <div className="h-72 overflow-hidden relative">
+              <div className="h-72 overflow-hidden relative bg-slate-50">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-105"
                 />
-                {product.badge && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="bg-orange-500 text-white text-[10px] font-black px-4 py-1.5 rounded-full shadow-lg backdrop-blur-sm tracking-[0.2em] uppercase border border-white/20">
-                      {product.badge.replace(/❖/g, '').trim()}
-                    </span>
-                  </div>
-                )}
+
               </div>
               <div className="p-8 flex-grow flex flex-col">
                 <div className="mb-6">

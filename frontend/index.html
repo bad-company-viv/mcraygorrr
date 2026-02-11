@@ -6,31 +6,93 @@
   <link rel="icon" type="image/jpeg" href="/images/favicon.jpeg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="McRAYGOR Mechanicals™ is the world's leading manufacturer of high-performance Sewer Cleaning Machines, Jetting Suction units, and Super Sucker machines. Since 2000, we have engineered robust mechanical infrastructure solutions for municipalities and industries across 15+ nations. Discover our commitment to quality, sustainability, and engineering excellence." />
+    content="McRAYGOR Mechanicals™: World's leading manufacturer of Sewer Cleaning Machines, Jetting Suction units, and Super Sucker machines since 2000." />
   <meta name="keywords"
-    content="professional sewer cleaning equipment, industrial jetting suction machine manufacturer, super sucker machine technology, disaster management equipment, municipal waste solutions India, hydraulic sewer cleaners, McRAYGOR mechanicals infrastructure, wastewater engineering solutions, high pressure jetting machines" />
+    content="sewer cleaning machines, jetting suction units, super sucker machines, municipal waste solutions, McRAYGOR mechanicals" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://beta.mcraygor.com/" />
-  <meta property="og:title" content="McRAYGOR Mechanicals™ | Engineering a Cleaner Tomorrow" />
+  <meta property="og:title" content="McRAYGOR™ | Sewer Cleaning & Industrial Solutions" />
   <meta property="og:description"
-    content="Trusted manufacturer of premium sewer cleaning machines and industrial infrastructure solutions since 2000. Serving 1100+ clients globally with engineering precision." />
+    content="Premium manufacturer of sewer cleaning machines and industrial infrastructure solutions. Engineering excellence since 2000." />
   <meta property="og:image" content="https://beta.mcraygor.com/images/mcraygor-logo.jpeg" />
+  <link rel="apple-touch-icon" href="/images/favicon.jpeg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://beta.mcraygor.com/" />
-  <meta property="twitter:title" content="McRAYGOR Mechanicals™ | Engineering a Cleaner Tomorrow" />
+  <meta property="twitter:title" content="McRAYGOR™ | Sewer Cleaning Machines" />
   <meta property="twitter:description"
-    content="Leading the future of municipal waste management with high-performance jetting suction and sewer cleaning technology." />
+    content="Leading manufacturer of high-performance jetting suction and sewer cleaning technology." />
   <meta property="twitter:image" content="https://beta.mcraygor.com/images/mcraygor-logo.jpeg" />
 
-  <title>McRAYGOR Mechanicals™ | Global Leader in Sewer Cleaning & Industrial Solutions</title>
+  <title>McRAYGOR™ | Sewer Cleaning Machines & Industrial Solutions</title>
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      }
+
+      #app-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        z-index: 9999;
+      }
+
+      .loader-spinner {
+        width: 48px;
+        height: 48px;
+        border: 4px solid #e2e8f0;
+        border-top-color: #059669;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      .loader-text {
+        margin-top: 24px;
+        color: #64748b;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.025em;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes pulse {
+
+        0%,
+        100% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+    <div id="app-loader">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading dedicated experience...</div>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

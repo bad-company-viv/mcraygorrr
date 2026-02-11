@@ -118,7 +118,7 @@ export default function AboutSection() {
               >
                 <img
                   src={machine2}
-                  alt="Sanitation"
+                  alt="McRAYGOR Sanitation Equipment"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 

@@ -42,7 +42,7 @@ const Products = () => {
   return (
     <div className="pt-24 bg-gray-50 min-h-screen flex flex-col">
       <SEO
-        title="Sewer Cleaning Machines & Industrial Products | McRAYGOR™"
+        title="Sewer Cleaning Machines & Industrial Products | McRAYGOR"
         description="Browse our range of high-performance sewer cleaning machines, jetting suction units, and municipal equipment. Superior engineering for reliable utility management."
         keywords="sewer cleaning machines, jetting suction unit, industrial sewer cleaners, municipal utility equipment"
         schema={{
@@ -59,7 +59,7 @@ const Products = () => {
       />
       <div className="container mx-auto px-4 pb-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">McRAYGOR™ Industrial Solutions</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">McRAYGOR Industrial Solutions</h1>
           <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             World-class sewer cleaning and municipal waste management equipment, engineered for maximum reliability.

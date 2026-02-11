@@ -10,7 +10,7 @@ const PrivacyPage = () => {
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
             <SEO
-                title="Privacy Policy | McRAYGOR™"
+                title="Privacy Policy | McRAYGOR"
                 description="Privacy Policy for McRAYGOR Mechanicals. Learn how we collect, use, and protect your personal information."
             />
             <div className="container mx-auto px-4 max-w-4xl">

@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const SEO = ({ title, description, keywords, image, schema }) => {
     const location = useLocation();
 
-    const baseTitle = "McRAYGOR Mechanicals™";
+    const baseTitle = "McRAYGOR Mechanicals";
     const metaTitle = title ? `${title} | ${baseTitle}` : `${baseTitle} | Sewer Cleaning Equipment India`;
     const metaDesc = description || "India's leading manufacturer of high-performance sewer cleaning equipment and municipal waste management solutions.";
     const metaKey = keywords || "sewer cleaning machine, jetting suction machine, super sucker, municipal equipment India, McRAYGOR, waste management";

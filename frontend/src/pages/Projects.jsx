@@ -13,7 +13,7 @@ const Projects = () => {
   return (
     <div className="pt-32 pb-24 bg-white min-h-screen relative overflow-hidden">
       <SEO
-        title="Sewer Cleaning Projects & Impact Cases | McRAYGOR™"
+        title="Sewer Cleaning Projects & Impact Cases | McRAYGOR"
         description="Discover our global impact through featured projects across more than 15 nations. We deliver high-performance mechanical infrastructure solutions worldwide."
         keywords="mcraygor projects, industrial infrastructure projects, global sewer cleaning projects, municipal works"
         schema={{

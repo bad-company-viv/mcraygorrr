@@ -12,7 +12,7 @@ const Awards = () => {
     return (
         <div className="pt-32 pb-24 bg-white min-h-screen relative overflow-hidden">
             <SEO
-                title="Achievements & Recognition | McRAYGOR™"
+                title="Achievements & Recognition | McRAYGOR"
                 description="Explore our global certifications including ISO 9001, BSCI, GS, IMS, and TÜV Rheinland. We are committed to international quality and safety standards."
                 keywords="mcraygor certifications, ISO 9001 sewer cleaning, BSCI compliant manufacturer, TÜV Rheinland certified machines"
             />
@@ -38,7 +38,7 @@ const Awards = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tighter"
                     >
-                        McRAYGOR™ Global <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Certifications</span>
+                        McRAYGOR Global <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Certifications</span>
                     </motion.h1>
 
                     <motion.p

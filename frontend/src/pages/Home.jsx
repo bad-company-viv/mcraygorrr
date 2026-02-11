@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <SEO
-        title="McRAYGOR™ | India's Leading Sewer Cleaning Machines & Industrial Solutions"
+        title="McRAYGOR | India's Leading Sewer Cleaning Machines & Industrial Solutions"
         description="McRAYGOR Mechanicals is the world's trusted manufacturer and solution provider for sewer cleaning equipment, jetting suction machines, and disaster management equipment since 2000."
         image="/images/McRaygor-Creative-1.webp"
         keywords="sewer cleaning machine manufacturer, jetting suction machine, super sucker, disaster management equipment, McRAYGOR mechanicals"

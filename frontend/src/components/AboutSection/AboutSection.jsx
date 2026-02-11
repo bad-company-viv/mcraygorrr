@@ -144,7 +144,7 @@ export default function AboutSection() {
                 About McRAYGOR
               </span>
               <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-[1.1]">
-                McRAYGOR™: Building Excellence <br />
+                McRAYGOR: Building Excellence <br />
                 <span className="text-orange-600">Since 2000</span>
               </h2>
               <div className="space-y-6">

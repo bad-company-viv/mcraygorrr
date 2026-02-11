@@ -28,7 +28,7 @@ const ProjectDetail = () => {
     return (
         <div className="pt-32 pb-24 bg-white min-h-screen relative overflow-hidden">
             <SEO
-                title={project.title}
+                title={`${project.title} | Sewer Cleaning Case Study | McRAYGOR™`}
                 description={project.description}
                 keywords={`mcraygor project, ${project.category}, ${project.location}, infrastructure project`}
                 image={project.image}

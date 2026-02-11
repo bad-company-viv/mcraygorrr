@@ -62,9 +62,10 @@ const About = () => {
   return (
     <div className="relative pt-32 pb-24 bg-white min-h-screen overflow-hidden">
       <SEO
-        title="About Us"
+        title="About McRAYGOR™ | Excellence in Sewer Cleaning & Industrial Solutions"
         description="Learn about McRAYGOR Mechanicals' history, our mission for excellence in mechanical infrastructure, and our 25-year legacy of engineering innovation."
         keywords="about mcraygor, sewer cleaning history, excellence in engineering, infrastructure solutions heritage"
+        image={machine2}
       />
       {/* Background Watermark */}
       <div className="absolute top-40 left-10 pointer-events-none select-none opacity-[0.02] overflow-hidden whitespace-nowrap">
@@ -89,7 +90,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1]"
           >
-            Engineering the Future of <br />
+            McRAYGOR™: Engineering the Future of <br />
             <span className="text-emerald-600">Infrastructure</span>
           </motion.h1>
           <div className="w-20 h-2 bg-orange-500 mx-auto rounded-full mb-10"></div>

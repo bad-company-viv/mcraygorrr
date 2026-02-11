@@ -11,13 +11,13 @@ const Blogs = () => {
     return (
         <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
             <SEO
-                title="Latest Insights"
+                title="Sewer Cleaning Insights & Blog | McRAYGOR™"
                 description="Stay updated with the latest news, technical updates, and industry insights from McRAYGOR Mechanicals, the leader in sewer cleaning technology."
                 keywords="sewer cleaning blog, industrial news India, McRAYGOR updates, waste management insights"
             />
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Latest Insights</h1>
+                    <h1 className="text-4xl font-bold text-gray-900 mb-4">McRAYGOR™ Latest Insights</h1>
                     <div className="w-24 h-1 bg-primary mx-auto"></div>
                     <p className="mt-4 text-lg text-gray-600">News, updates, and thought leadership from McRAYGOR.</p>
                 </div>

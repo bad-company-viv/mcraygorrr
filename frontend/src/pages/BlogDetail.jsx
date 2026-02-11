@@ -23,7 +23,7 @@ const BlogDetail = () => {
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
             <SEO
-                title={blog.title}
+                title={`${blog.title} | Sewer Cleaning Insights | McRAYGOR™`}
                 description={blog.excerpt}
                 keywords={`mcraygor blog, ${blog.author}, water management news, infrastructure insights`}
                 image={blog.image}

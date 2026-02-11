@@ -28,7 +28,8 @@ const CRMForm = () => {
         data-height="630"
         data-layout-iframe-id="inline-V7qCxzP4e8j2toAHTuf2"
         data-form-id="V7qCxzP4e8j2toAHTuf2"
-        title="Form 0"
+        title="McRAYGOR Quotation Request Form"
+        loading="lazy"
       >
       </iframe>
     </div>

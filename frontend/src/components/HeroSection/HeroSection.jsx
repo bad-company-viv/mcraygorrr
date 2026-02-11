@@ -69,6 +69,7 @@ export default function HeroSection() {
             </span>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              <span className="block text-2xl md:text-3xl text-orange-500 font-black mb-2">McRAYGOR™</span>
               Largest{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                 Sewer Cleaning

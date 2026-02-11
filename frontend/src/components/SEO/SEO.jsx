@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
-const SEO = ({ title, description, keywords, image }) => {
+const SEO = ({ title, description, keywords, image, schema }) => {
     const location = useLocation();
 
     const baseTitle = "McRAYGOR Mechanicals™";
@@ -11,6 +11,34 @@ const SEO = ({ title, description, keywords, image }) => {
     const baseUrl = "https://beta.mcraygor.com";
     const currentUrl = `${baseUrl}${location.pathname}`;
     const metaImage = image ? (image.startsWith('http') ? image : `${baseUrl}${image}`) : `${baseUrl}/images/mcraygor-logo.jpeg`;
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": location.pathname === '/' ? [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": baseUrl
+            }
+        ] : [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": baseUrl
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": location.pathname.split('/').filter(Boolean).map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' '),
+                "item": currentUrl
+            }
+        ]
+    };
+
+    const allSchemas = Array.isArray(schema) ? [breadcrumbSchema, ...schema] : schema ? [breadcrumbSchema, schema] : [breadcrumbSchema];
 
     return (
         <Helmet>
@@ -33,6 +61,11 @@ const SEO = ({ title, description, keywords, image }) => {
             <meta property="twitter:title" content={metaTitle} />
             <meta property="twitter:description" content={metaDesc} />
             <meta property="twitter:image" content={metaImage} />
+
+            {/* JSON-LD Structured Data */}
+            <script type="application/ld+json">
+                {JSON.stringify(allSchemas)}
+            </script>
         </Helmet>
     );
 };

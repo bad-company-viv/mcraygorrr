@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
             <SEO
-                title="Terms and Conditions"
+                title="Terms and Conditions | McRAYGOR™"
                 description="Terms and Conditions for using McRAYGOR Mechanicals website. Read our rules and regulations."
             />
             <div className="container mx-auto px-4 max-w-4xl">

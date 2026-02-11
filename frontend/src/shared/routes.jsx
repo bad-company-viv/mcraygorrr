@@ -20,22 +20,13 @@ const PrivacyPage = lazy(() => import("@/pages/PrivacyPage"));
 const TermsAndConditions = lazy(() => import("@/pages/TermsAndConditions"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
-// Helper for loading state
-// Helper for loading state
-const PageLoader = () => (
-  <div className="min-h-screen flex flex-col items-center justify-center bg-white">
-    <div className="w-12 h-12 border-4 border-slate-200 border-t-emerald-600 rounded-full animate-spin" />
-    <p className="mt-6 text-slate-500 font-medium animate-pulse">Loading...</p>
-  </div>
-);
-
 export default function AppRoutes() {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
       <ErrorBoundary>
-        <Suspense fallback={<PageLoader />}>
+        <Suspense fallback={null}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<PageTransition><Home /></PageTransition>} />
             <Route path="/about" element={<PageTransition><About /></PageTransition>} />

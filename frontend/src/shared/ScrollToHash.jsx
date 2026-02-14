@@ -1,10 +1,13 @@
+"use client";
+
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 const ScrollToHash = () => {
-    const { hash, pathname } = useLocation();
+    const pathname = usePathname();
 
     useEffect(() => {
+        const hash = window.location.hash;
         const scrollToElement = () => {
             const id = hash.replace("#", "");
             const element = document.getElementById(id);
@@ -32,9 +35,10 @@ const ScrollToHash = () => {
         } else {
             window.scrollTo(0, 0);
         }
-    }, [hash, pathname]);
+    }, [pathname]);
 
     return null;
 };
 
 export default ScrollToHash;
+

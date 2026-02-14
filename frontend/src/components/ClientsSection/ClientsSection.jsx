@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -44,10 +46,7 @@ export default function ClientsSection() {
                 viewport={{ once: true }}
                 transition={{ delay: (index % clients.length) * 0.05 }}
               >
-                <div className="w-44 h-24 bg-white rounded-xl border border-slate-100 
-                                flex items-center justify-center 
-                                hover:border-emerald-300 hover:shadow-md 
-                                transition-all duration-300">
+                <div className="w-44 h-24 bg-white rounded-xl border border-slate-100 flex items-center justify-center hover:border-emerald-300 hover:shadow-md transition-all duration-300">
                   <img
                     src={client.logo}
                     alt={client.name}

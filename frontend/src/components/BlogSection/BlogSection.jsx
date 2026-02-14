@@ -1,9 +1,12 @@
+"use client";
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, Clock, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { blogs } from '@/data/blogs';
+
 
 // Variants removed due to non-use
 
@@ -32,7 +35,7 @@ export default function BlogSection() {
               </span>
             </h2>
           </div>
-          <Link to="/blogs">
+          <Link href="/blogs">
             <Button
               variant="outline"
               className="self-start md:self-auto border-slate-300 hover:border-emerald-500 hover:text-emerald-600 rounded-full"
@@ -55,12 +58,12 @@ export default function BlogSection() {
                 transition={{ duration: 0.5 }}
                 className="group cursor-pointer"
               >
-                <Link to={`/blogs/${article.id}`} className="block h-full">
+                <Link href={`/blogs/${article.id}`} className="block h-full">
                   <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 h-full flex flex-col">
                     {/* Image */}
                     <div className="relative aspect-[16/10] overflow-hidden">
                       <img
-                        src={article.image}
+                        src={article.image.src || article.image}
                         alt={article.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />

@@ -1,8 +1,11 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 
 const heroImages = [
   { src: "/images/McRaygor-Creative-1.webp", alt: "McRAYGOR Heavy Duty Sewer Cleaning Machine" },
@@ -84,7 +87,7 @@ export default function HeroSection() {
 
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
-              <Link to="/products">
+              <Link href="/products">
                 <Button
                   size="lg"
                   className="bg-orange-500 hover:bg-orange-600 text-zinc-900 px-8 py-6 text-lg rounded-full"

@@ -1,9 +1,11 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import brochure from "@/assets/brochure.pdf";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import QuotationModal from "@/components/QuotationModal/QuotationModal";
 
 const navItems = [
@@ -18,10 +20,12 @@ export default function Header({ logoUrl }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
+
+  const brochure = "/brochure.pdf"; // Assuming it was moved to public
 
   const handleHomeClick = (e) => {
-    if (location.pathname === '/') {
+    if (pathname === '/') {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -100,7 +104,7 @@ export default function Header({ logoUrl }) {
           <div className="flex items-center justify-between h-[80px]">
 
             {/* LOGO */}
-            <Link to="/" onClick={handleHomeClick} className="flex items-center gap-3">
+            <Link href="/" onClick={handleHomeClick} className="flex items-center gap-3">
               <img
                 src={logoUrl}
                 alt="McRAYGOR"
@@ -127,8 +131,8 @@ export default function Header({ logoUrl }) {
                       <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
                     </button>
                   ) : (
-                    <NavLink
-                      to={item.to}
+                    <Link
+                      href={item.to}
                       onClick={(e) => {
                         if (item.to === '/') handleHomeClick(e);
                       }}
@@ -139,8 +143,8 @@ export default function Header({ logoUrl }) {
                       {item.dropdown && (
                         <ChevronDown className="inline ml-1 w-4 h-4" />
                       )}
-                      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                    </NavLink>
+                      <span className={`absolute left-0 bottom-0 h-0.5 bg-orange-500 transition-all duration-300 ${pathname === item.to ? "w-full" : "w-0 group-hover:w-full"}`}></span>
+                    </Link>
                   )}
 
                   {/* DROPDOWN */}
@@ -153,13 +157,13 @@ export default function Header({ logoUrl }) {
                         exit={{ opacity: 0, y: 10 }}
                       >
                         {item.dropdown.map((subItem, subIndex) => (
-                          <NavLink
+                          <Link
                             key={subIndex}
-                            to={subItem.to}
+                            href={subItem.to}
                             className="block px-4 py-3 text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
                           >
                             {subItem.name}
-                          </NavLink>
+                          </Link>
                         ))}
                       </motion.div>
                     )}
@@ -221,8 +225,8 @@ export default function Header({ logoUrl }) {
                         {item.name}
                       </button>
                     ) : (
-                      <NavLink
-                        to={item.to}
+                      <Link
+                        href={item.to}
                         onClick={(e) => {
                           setIsMobileMenuOpen(false);
                           if (item.to === '/') handleHomeClick(e);
@@ -230,7 +234,7 @@ export default function Header({ logoUrl }) {
                         className="text-white text-lg font-medium hover:text-orange-500 transition-colors"
                       >
                         {item.name}
-                      </NavLink>
+                      </Link>
                     )}
                   </div>
                 ))}

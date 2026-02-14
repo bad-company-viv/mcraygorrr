@@ -1,8 +1,11 @@
+"use client";
+
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { CheckCircle2, Award, Users, Globe, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+
 import machine1 from '@/assets/hero/machine1.jpeg';
 import machine2 from '@/assets/hero/machine2.jpeg';
 
@@ -82,7 +85,7 @@ export default function AboutSection() {
               {/* Main Image with Decorative Border */}
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border-8 border-white group">
                 <img
-                  src={machine1}
+                  src={machine1.src || machine1}
                   alt="McRAYGOR Excellence"
                   className="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -117,7 +120,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <img
-                  src={machine2}
+                  src={machine2.src || machine2}
                   alt="McRAYGOR Sanitation Equipment"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -183,7 +186,7 @@ export default function AboutSection() {
 
             {/* Action Area */}
             <div className="pt-6 flex flex-wrap gap-4 items-center">
-              <Link to="/about">
+              <Link href="/about">
                 <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-10 h-14 font-bold shadow-xl shadow-orange-600/20 group">
                   Discover Our Heritage
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

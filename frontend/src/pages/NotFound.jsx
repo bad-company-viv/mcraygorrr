@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SEO from '@/components/SEO/SEO';
 
 const NotFound = () => {
     useEffect(() => {
@@ -11,6 +12,10 @@ const NotFound = () => {
 
     return (
         <div className="min-h-[80vh] flex items-center justify-center bg-white px-4">
+            <SEO
+                title="Page Not Found | McRAYGOR"
+                description="The page you are looking for does not exist. Return to McRAYGOR Mechanicals home page for world-class sewer cleaning equipment."
+            />
             <div className="text-center max-w-2xl mx-auto">
 
                 {/* Animated 404 Text */}

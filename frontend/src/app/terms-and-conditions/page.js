@@ -3,6 +3,9 @@ import React from 'react';
 export const metadata = {
     title: "Terms and Conditions | McRAYGOR",
     description: "Terms and Conditions for using McRAYGOR Mechanicals website. Read our rules and regulations.",
+    alternates: {
+        canonical: '/terms-and-conditions',
+    },
 };
 
 export default function TermsAndConditionsPage() {

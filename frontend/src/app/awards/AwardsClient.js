@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { awards } from '@/data/awards';
 import { Award, Shield, CheckCircle } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const AwardsClient = () => {
     return (
@@ -15,6 +16,7 @@ const AwardsClient = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
+                <Breadcrumbs />
                 <div className="text-center mb-20">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}

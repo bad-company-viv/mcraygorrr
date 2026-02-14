@@ -3,6 +3,9 @@ import React from 'react';
 export const metadata = {
     title: "Privacy Policy | McRAYGOR",
     description: "Privacy Policy for McRAYGOR Mechanicals. Learn how we collect, use, and protect your personal information.",
+    alternates: {
+        canonical: '/privacy-policy',
+    },
 };
 
 export default function PrivacyPolicyPage() {

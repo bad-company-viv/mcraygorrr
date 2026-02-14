@@ -6,6 +6,7 @@ import { MapPin, Calendar, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
 import CRMForm from '@/components/CRMForm/CRMForm';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const ProjectDetailClient = ({ params }) => {
     const { id } = use(params);
@@ -30,6 +31,7 @@ const ProjectDetailClient = ({ params }) => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-5xl mx-auto">
+                    <Breadcrumbs />
                     <Link href="/projects">
                         <motion.button
                             whileHover={{ x: -5 }}

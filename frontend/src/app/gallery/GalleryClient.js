@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { galleryContent, galleryImages } from '@/data/gallery';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 // Better Marquee Implementation
 const InfiniteLoop = ({ children, duration, reverse = false }) => {
@@ -40,6 +41,7 @@ const GalleryClient = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
+                <Breadcrumbs />
                 {/* Header */}
                 <div className="text-center mb-24 max-w-4xl mx-auto">
                     <motion.div

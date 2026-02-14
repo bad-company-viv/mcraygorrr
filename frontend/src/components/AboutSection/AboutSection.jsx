@@ -61,9 +61,9 @@ export default function AboutSection() {
     <section className="relative py-32 bg-white overflow-hidden">
       {/* Decorative Background Text */}
       <div className="absolute top-20 left-10 pointer-events-none select-none opacity-[0.03] overflow-hidden whitespace-nowrap">
-        <h2 className="text-[250px] font-black tracking-tighter text-slate-900 leading-none">
+        <div className="text-[250px] font-black tracking-tighter text-slate-900 leading-none">
           EXCELLENCE
-        </h2>
+        </div>
       </div>
 
       {/* Decorative Gradient Background */}
@@ -147,8 +147,8 @@ export default function AboutSection() {
                 About McRAYGOR
               </span>
               <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-[1.1]">
-                McRAYGOR: Building Excellence <br />
-                <span className="text-orange-600">Since 2000</span>
+                McRAYGOR: Engineering a <br />
+                <span className="text-orange-600">Cleaner Tomorrow</span>
               </h2>
               <div className="space-y-6">
                 <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -156,8 +156,8 @@ export default function AboutSection() {
                   hydraulic products and sewer cleaning equipment.
                 </p>
                 <p className="text-lg text-slate-500 leading-relaxed">
-                  With over <span className="text-slate-900 font-bold">3,000+ projects</span> completed nationwide,
-                  we deliver innovative and sustainable solutions for water management,
+                  As the <span className="text-slate-900 font-bold">largest sewer cleaning machines manufacturer</span> in the region with over <span className="text-slate-900 font-bold">3,000+ projects</span> completed nationwide,
+                  we deliver innovative and sustainable solutions for water management
                   and disaster management systems.
                 </p>
               </div>

@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Globe, Award, Leaf, Users, Wrench, Phone, Target, Shield, Zap } from 'lucide-react';
 import machine2 from '@/assets/hero/machine2.jpeg';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const AboutClient = () => {
     const values = [
@@ -64,12 +65,13 @@ const AboutClient = () => {
         <div className="relative pt-32 pb-24 bg-white min-h-screen overflow-hidden">
             {/* Background Watermark */}
             <div className="absolute top-40 left-10 pointer-events-none select-none opacity-[0.02] overflow-hidden whitespace-nowrap">
-                <h2 className="text-[280px] font-black tracking-tighter text-slate-900 leading-none">
+                <div className="text-[280px] font-black tracking-tighter text-slate-900 leading-none">
                     HERITAGE
-                </h2>
+                </div>
             </div>
 
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+                <Breadcrumbs />
 
                 {/* Hero Section */}
                 <div className="max-w-4xl mx-auto text-center mb-24">

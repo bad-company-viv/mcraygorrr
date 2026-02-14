@@ -16,8 +16,22 @@ export async function generateMetadata({ params }) {
         title: `${project.title} | Sewer Cleaning Case Study | McRAYGOR`,
         description: project.description,
         keywords: `mcraygor project, ${project.category}, ${project.location}, infrastructure project`,
+        alternates: {
+            canonical: `/projects/${project.id}`,
+        },
         openGraph: {
-            images: [project.image],
+            title: project.title,
+            description: project.description,
+            url: `https://beta.mcraygor.com/projects/${project.id}`,
+            images: [
+                {
+                    url: project.image.src || project.image,
+                    width: 1200,
+                    height: 630,
+                    alt: project.title,
+                }
+            ],
+            type: 'website',
         },
     };
 }

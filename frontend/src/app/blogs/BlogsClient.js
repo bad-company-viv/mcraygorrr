@@ -3,11 +3,13 @@
 import React, { useEffect } from 'react';
 import { blogs } from '@/data/blogs';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const BlogsClient = () => {
     return (
         <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
             <div className="container mx-auto px-4">
+                <Breadcrumbs />
                 <div className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">McRAYGOR Latest Insights</h1>
                     <div className="w-24 h-1 bg-primary mx-auto"></div>
@@ -20,7 +22,7 @@ const BlogsClient = () => {
                             <div className="h-48 overflow-hidden bg-gray-200">
                                 {/* Fallback pattern if image fails or is a placeholder */}
                                 {blog.image ? (
-                                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover"
+                                    <img src={blog.image.src || blog.image} alt={blog.title} className="w-full h-full object-cover"
                                         onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('bg-gray-300'); }} />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white text-3xl font-bold opacity-20">McRAYGOR</div>

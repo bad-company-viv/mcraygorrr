@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const ProjectsClient = () => {
     return (
@@ -16,6 +17,7 @@ const ProjectsClient = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
+                <Breadcrumbs />
                 {/* Header */}
                 <div className="text-center max-w-4xl mx-auto mb-32">
                     <motion.div

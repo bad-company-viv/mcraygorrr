@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { products } from '@/data/products';
 import QuotationForm from '@/components/QuotationForm/QuotationForm';
 import { ArrowRight } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const ProductsClient = () => {
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -40,6 +41,7 @@ const ProductsClient = () => {
     return (
         <div className="pt-24 bg-gray-50 min-h-screen flex flex-col">
             <div className="container mx-auto px-4 pb-16">
+                <Breadcrumbs />
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">McRAYGOR Industrial Solutions</h1>
                     <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>

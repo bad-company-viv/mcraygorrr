@@ -3,6 +3,7 @@
 import React, { use } from 'react';
 import Link from 'next/link';
 import { blogs } from '@/data/blogs';
+import Breadcrumbs from '@/components/Breadcrumbs/Breadcrumbs';
 
 const BlogDetailClient = ({ params }) => {
     const { id } = use(params);
@@ -20,6 +21,7 @@ const BlogDetailClient = ({ params }) => {
     return (
         <div className="pt-24 pb-20 bg-white min-h-screen">
             <div className="container mx-auto px-4 max-w-4xl">
+                <Breadcrumbs />
                 <Link href="/blogs" className="inline-flex items-center text-gray-500 hover:text-primary mb-8 transition-colors">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Back to Blogs

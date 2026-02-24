@@ -58,18 +58,17 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-14 items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-20 min-h-screen flex items-start lg:items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center w-full mt-24 lg:mt-0">
 
           {/* LEFT */}
-          <div className="space-y-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium">
+          <div className="space-y-6">
+            <span className="inline-flex items-center gap-2 px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium">
               <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               Trusted Since 2000
             </span>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-              <span className="block text-2xl md:text-3xl text-orange-500 font-black mb-2">McRAYGOR</span>
               Largest{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                 Sewer Cleaning

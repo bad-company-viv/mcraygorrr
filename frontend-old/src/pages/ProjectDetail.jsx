@@ -118,21 +118,29 @@ const ProjectDetail = () => {
                     </div>
 
                     {/* Project Metrics Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
-                        {project.metrics?.map((metric, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-white border border-slate-100 p-6 rounded-[2rem] text-center shadow-sm hover:shadow-md transition-shadow"
-                            >
-                                <p className="text-sm font-black text-slate-900 uppercase tracking-widest mb-1">Key Meta</p>
-                                <p className="text-emerald-600 font-bold text-xs">{metric}</p>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {project.metrics && project.metrics.length > 0 && (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-white border border-slate-100 p-8 rounded-[2rem] shadow-sm mb-24 max-w-4xl mx-auto"
+                        >
+                            <div className="flex items-center gap-4 mb-6 justify-center">
+                                <div className="w-1.5 h-6 bg-emerald-500 rounded-full" />
+                                <p className="text-sm font-black text-slate-900 uppercase tracking-widest">Project Highlights</p>
+                                <div className="w-1.5 h-6 bg-emerald-500 rounded-full" />
+                            </div>
+
+                            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+                                {project.metrics.map((metric, i) => (
+                                    <div key={i} className="flex items-center gap-2 bg-emerald-50/50 px-4 py-2 rounded-full border border-emerald-100">
+                                        <div className="w-2 h-2 bg-emerald-500 rounded-full" />
+                                        <p className="text-emerald-700 font-bold text-sm">{metric}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
 
                     {/* Detailed Content */}
                     <motion.div

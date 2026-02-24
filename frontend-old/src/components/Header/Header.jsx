@@ -61,7 +61,7 @@ export default function Header({ logoUrl }) {
         className="hidden lg:flex fixed top-0 left-0 right-0 z-50 h-[40px] items-center border-b transition-all duration-300"
         style={{ backgroundColor: bgColor, color: textColor, borderColor }}
       >
-        <div className="w-full mx-auto px-8 lg:px-20 flex justify-between w-full text-sm">
+        <div className="w-full mx-auto px-4 lg:px-20 flex justify-between w-full text-sm">
           <div className="flex gap-6">
             <div className="flex items-center gap-4">
               <a href="tel:+919812001368" className="flex items-center gap-2 hover:text-emerald-400 transition-colors">
@@ -96,7 +96,7 @@ export default function Header({ logoUrl }) {
               : "none",
         }}
       >
-        <div className="w-full mx-auto px-8 lg:px-20">
+        <div className="w-full mx-auto px-4 lg:px-20">
           <div className="flex items-center justify-between h-[80px]">
 
             {/* LOGO */}

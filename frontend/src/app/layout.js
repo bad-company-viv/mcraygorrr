@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Header logoUrl="/images/mcraygor-logo.jpeg" />
-        <main className="pt-[120px] lg:pt-[100px]">
+        <main className="pt-[80px] lg:pt-[120px]">
           <ScrollToHash />
           {children}
         </main>

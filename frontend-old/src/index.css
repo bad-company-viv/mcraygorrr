@@ -114,6 +114,11 @@
 }
 
 @layer base {
+  html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -122,3 +127,4 @@
     @apply bg-background text-foreground;
   }
 }
+

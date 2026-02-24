@@ -12,7 +12,7 @@ const App = () => {
       />
 
       {/* 🔑 THIS IS THE IMPORTANT PART */}
-      <main className="pt-[120px] lg:pt-[100px]">
+      <main className="pt-[80px] lg:pt-[120px]">
         <ScrollToHash />
         <AppRoutes />
       </main>

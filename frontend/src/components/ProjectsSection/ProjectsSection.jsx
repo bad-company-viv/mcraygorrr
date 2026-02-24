@@ -1,17 +1,13 @@
-"use client";
-
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Calendar, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { Link, useNavigate } from 'react-router-dom';
 import { projects } from '@/data/projects';
 
 export default function ProjectsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const router = useRouter();
-
+  const navigate = useNavigate();
 
   // We only show the first 4 projects in the carousel to keep it clean
   const displayedProjects = projects.slice(0, 4);
@@ -86,11 +82,11 @@ export default function ProjectsSection() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.5 }}
-              onClick={() => router.push(`/projects/${displayedProjects[activeIndex].id}`)}
+              onClick={() => navigate(`/projects/${displayedProjects[activeIndex].id}`)}
             >
               <div className="aspect-[4/3] relative">
                 <img
-                  src={displayedProjects[activeIndex].image.src || displayedProjects[activeIndex].image}
+                  src={displayedProjects[activeIndex].image}
                   alt={displayedProjects[activeIndex].title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -138,7 +134,7 @@ export default function ProjectsSection() {
               >
                 <div className="aspect-[4/3] relative">
                   <img
-                    src={project.image.src || project.image}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -176,7 +172,7 @@ export default function ProjectsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <Link href="/projects">
+          <Link to="/projects">
             <Button
               size="lg"
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 rounded-full group"

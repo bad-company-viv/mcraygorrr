@@ -1,13 +1,11 @@
-"use client";
-
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import brochure from "@/assets/brochure.pdf";
 import CRMForm from '@/components/CRMForm/CRMForm';
 
 export default function QuotationModal({ isOpen, onClose }) {
-    const brochure = "/brochure.pdf";
 
     return (
         <AnimatePresence>
@@ -83,4 +81,3 @@ export default function QuotationModal({ isOpen, onClose }) {
         </AnimatePresence>
     );
 }
-

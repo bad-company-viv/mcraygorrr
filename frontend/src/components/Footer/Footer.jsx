@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -15,8 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 
 /* ---------------- DATA ---------------- */
 
@@ -29,6 +26,8 @@ const quickLinks = [
   { name: "Contact", action: "contact" },
 ];
 
+
+
 const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/people/Mcraygor-Mechanicals-Haryana/pfbid0qePKjr71ddpkYnJWw5QRedgSsTuDDaP9zeu3np2NKR9ekTK8QhAXT9niszHcjbLQl/", label: "Facebook" },
   { icon: Twitter, href: "https://x.com/mcraygor", label: "Twitter" },
@@ -39,15 +38,15 @@ const socialLinks = [
 /* ---------------- COMPONENT ---------------- */
 
 export default function Footer() {
-  const router = useRouter();
-  const pathname = usePathname();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   const handleContactClick = (e) => {
     e.preventDefault();
-    if (pathname !== '/') {
-      router.push('/#quotation-form');
+    if (location.pathname !== '/') {
+      navigate('/#quotation-form');
     } else {
       const element = document.getElementById('quotation-form');
       if (element) {
@@ -120,18 +119,20 @@ export default function Footer() {
                       {link.name}
                     </button>
                   ) : (
-                    <Link
-                      href={link.to}
+                    <NavLink
+                      to={link.to}
                       className="text-slate-400 hover:text-emerald-400 flex items-center gap-2 group"
                     >
                       <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                       {link.name}
-                    </Link>
+                    </NavLink>
                   )}
                 </li>
               ))}
             </ul>
           </motion.div>
+
+
 
           {/* NEWSLETTER + CONTACT */}
           <motion.div className="max-w-sm w-full">
@@ -197,8 +198,8 @@ export default function Footer() {
               © {new Date().getFullYear()} McRAYGOR Mechanicals Infrastructure. All rights reserved.
             </p>
             <div className="flex justify-center md:justify-start gap-6 text-sm text-slate-500 md:mt-2">
-              <Link href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
-              <Link href="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms & Conditions</Link>
+              <Link to="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
+              <Link to="/terms-and-conditions" className="hover:text-emerald-400 transition-colors">Terms & Conditions</Link>
             </div>
           </div>
 

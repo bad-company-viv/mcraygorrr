@@ -1,7 +1,5 @@
-"use client";
-
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Droplets, Settings, Wrench, Shield, ArrowUpRight } from 'lucide-react';
 
@@ -102,7 +100,7 @@ export default function ServicesSection() {
               variants={itemVariants}
               className="group relative"
             >
-              <Link href="/products" className="block h-full">
+              <Link to="/products" className="block h-full">
                 <div className={`relative h-full bg-white rounded-3xl p-8 border ${service.borderColor} hover:border-transparent hover:shadow-2xl transition-all duration-500 overflow-hidden`}>
                   {/* Hover Background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />

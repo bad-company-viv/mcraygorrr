@@ -1,11 +1,8 @@
-"use client";
-
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { CheckCircle2, Award, Users, Globe, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
 import machine1 from '@/assets/hero/machine1.jpeg';
 import machine2 from '@/assets/hero/machine2.jpeg';
 
@@ -61,9 +58,9 @@ export default function AboutSection() {
     <section className="relative py-32 bg-white overflow-hidden">
       {/* Decorative Background Text */}
       <div className="absolute top-20 left-10 pointer-events-none select-none opacity-[0.03] overflow-hidden whitespace-nowrap">
-        <div className="text-[250px] font-black tracking-tighter text-slate-900 leading-none">
+        <h2 className="text-[250px] font-black tracking-tighter text-slate-900 leading-none">
           EXCELLENCE
-        </div>
+        </h2>
       </div>
 
       {/* Decorative Gradient Background */}
@@ -85,7 +82,7 @@ export default function AboutSection() {
               {/* Main Image with Decorative Border */}
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border-8 border-white group">
                 <img
-                  src={machine1.src || machine1}
+                  src={machine1}
                   alt="McRAYGOR Excellence"
                   className="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -120,7 +117,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <img
-                  src={machine2.src || machine2}
+                  src={machine2}
                   alt="McRAYGOR Sanitation Equipment"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -147,8 +144,8 @@ export default function AboutSection() {
                 About McRAYGOR
               </span>
               <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-[1.1]">
-                McRAYGOR: Engineering a <br />
-                <span className="text-orange-600">Cleaner Tomorrow</span>
+                McRAYGOR: Building Excellence <br />
+                <span className="text-orange-600">Since 2000</span>
               </h2>
               <div className="space-y-6">
                 <p className="text-xl text-slate-600 leading-relaxed font-medium">
@@ -156,8 +153,8 @@ export default function AboutSection() {
                   hydraulic products and sewer cleaning equipment.
                 </p>
                 <p className="text-lg text-slate-500 leading-relaxed">
-                  As the <span className="text-slate-900 font-bold">largest sewer cleaning machines manufacturer</span> in the region with over <span className="text-slate-900 font-bold">3,000+ projects</span> completed nationwide,
-                  we deliver innovative and sustainable solutions for water management
+                  With over <span className="text-slate-900 font-bold">3,000+ projects</span> completed nationwide,
+                  we deliver innovative and sustainable solutions for water management,
                   and disaster management systems.
                 </p>
               </div>
@@ -186,7 +183,7 @@ export default function AboutSection() {
 
             {/* Action Area */}
             <div className="pt-6 flex flex-wrap gap-4 items-center">
-              <Link href="/about">
+              <Link to="/about">
                 <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-10 h-14 font-bold shadow-xl shadow-orange-600/20 group">
                   Discover Our Heritage
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

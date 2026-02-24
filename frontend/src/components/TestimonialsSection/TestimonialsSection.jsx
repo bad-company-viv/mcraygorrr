@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -97,7 +95,7 @@ export default function TestimonialsSection() {
                   <div className="relative mb-8">
                     <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-orange-100 shadow-xl">
                       <img
-                        src={testimonials[currentIndex].image.src || testimonials[currentIndex].image}
+                        src={testimonials[currentIndex].image}
                         alt={testimonials[currentIndex].name}
                         className="w-full h-full object-cover"
                       />

@@ -1,11 +1,9 @@
-"use client";
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import brochure from "@/assets/brochure.pdf";
 import CRMForm from '@/components/CRMForm/CRMForm';
-
 
 const contactInfo = [
   {
@@ -112,7 +110,7 @@ export default function QuotationForm() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              <a href="/brochure.pdf" download="McRAYGOR_Brochure.pdf" className="inline-block">
+              <a href={brochure} download="McRAYGOR_Brochure.pdf" className="inline-block">
                 <Button
                   variant="outline"
                   size="lg"

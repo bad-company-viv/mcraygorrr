@@ -25,7 +25,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-slate-950 overflow-hidden">
+    <section className="relative min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-120px)] bg-slate-950 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <AnimatePresence mode="wait">
@@ -58,8 +58,8 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-20 min-h-screen flex items-start lg:items-center">
-        <div className="grid lg:grid-cols-2 gap-14 items-center w-full mt-24 lg:mt-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-4 pb-10 lg:pb-8 min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-120px)] flex items-start lg:items-center">
+        <div className="grid lg:grid-cols-2 gap-14 items-center w-full mt-24 lg:mt-0 lg:-translate-y-12 lg:origin-top lg:scale-90 xl:-translate-y-10 xl:scale-95 2xl:-translate-y-8 2xl:scale-100">
 
           {/* LEFT */}
           <div className="space-y-6">

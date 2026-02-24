@@ -55,7 +55,7 @@ function AnimatedCounter({ value, suffix }) {
 
 export default function AboutSection() {
   return (
-    <section className="relative py-32 bg-white overflow-hidden">
+    <section className="relative py-24 xl:py-28 bg-white overflow-hidden">
       {/* Decorative Background Text */}
       <div className="absolute top-20 left-10 pointer-events-none select-none opacity-[0.03] overflow-hidden whitespace-nowrap">
         <h2 className="text-[250px] font-black tracking-tighter text-slate-900 leading-none">
@@ -68,7 +68,7 @@ export default function AboutSection() {
       <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-emerald-50/30 to-transparent pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-14 xl:gap-20 items-center">
 
           {/* Left - Image Composition */}
           <motion.div
@@ -84,7 +84,7 @@ export default function AboutSection() {
                 <img
                   src={machine1}
                   alt="McRAYGOR Excellence"
-                  className="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-[500px] xl:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
               </div>
@@ -132,7 +132,7 @@ export default function AboutSection() {
 
           {/* Right - Content */}
           <motion.div
-            className="space-y-10"
+            className="space-y-8 lg:space-y-10"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -143,12 +143,12 @@ export default function AboutSection() {
                 <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                 About McRAYGOR
               </span>
-              <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-8 leading-[1.1]">
+              <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold text-slate-900 mb-8 leading-[1.1]">
                 McRAYGOR: Building Excellence <br />
                 <span className="text-orange-600">Since 2000</span>
               </h2>
               <div className="space-y-6">
-                <p className="text-xl text-slate-600 leading-relaxed font-medium">
+                <p className="text-lg xl:text-xl text-slate-600 leading-relaxed font-medium">
                   McRAYGOR Mechanicals Infrastructure is India's leading manufacturer and exporter of
                   hydraulic products and sewer cleaning equipment.
                 </p>

@@ -101,7 +101,7 @@ export default function ServicesSection() {
               className="group relative"
             >
               <Link to="/products" className="block h-full">
-                <div className={`relative h-full bg-white rounded-3xl p-8 border ${service.borderColor} hover:border-transparent hover:shadow-2xl transition-all duration-500 overflow-hidden`}>
+                <div className={`relative h-full bg-white rounded-3xl p-8 border ${service.borderColor} hover:border-transparent hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col`}>
                   {/* Hover Background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
 
@@ -120,7 +120,7 @@ export default function ServicesSection() {
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="flex items-center gap-2 text-emerald-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="mt-auto flex items-center gap-2 text-emerald-600 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span>Learn more</span>
                     <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </div>

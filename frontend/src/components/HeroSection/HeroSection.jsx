@@ -58,8 +58,8 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-4 pb-10 lg:pb-8 min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-120px)] flex items-start lg:items-center">
-        <div className="grid lg:grid-cols-2 gap-14 items-center w-full mt-24 lg:mt-0 lg:-translate-y-12 lg:origin-top lg:scale-90 xl:-translate-y-10 xl:scale-95 2xl:-translate-y-8 2xl:scale-100">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-4 lg:pt-8 pb-10 lg:pb-8 min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-120px)] flex items-start lg:items-center">
+        <div className="grid lg:grid-cols-2 gap-12 xl:gap-14 items-center w-full mt-24 lg:mt-2 lg:origin-top lg:scale-[0.86] xl:scale-90 2xl:scale-95">
 
           {/* LEFT */}
           <div className="space-y-6">
@@ -68,7 +68,7 @@ export default function HeroSection() {
               Trusted Since 2000
             </span>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold text-white leading-tight">
               Largest{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                 Sewer Cleaning
@@ -76,7 +76,7 @@ export default function HeroSection() {
               Machines Manufacturer
             </h1>
 
-            <p className="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed">
+            <p className="text-base md:text-lg xl:text-xl text-slate-400 max-w-xl leading-relaxed">
               Engineering excellence in sewer cleaning machines, disaster
               management equipment, and comprehensive industrial solutions since 2000.
             </p>
@@ -120,7 +120,7 @@ export default function HeroSection() {
                 <img
                   src={heroImages[current].src}
                   alt={heroImages[current].alt}
-                  className="w-full h-[500px] object-contain bg-slate-900/50"
+                  className="w-full h-[460px] xl:h-[500px] object-contain bg-slate-900/50"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               </motion.div>
